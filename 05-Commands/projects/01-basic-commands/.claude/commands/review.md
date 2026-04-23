@@ -1,53 +1,53 @@
 ---
-description: Review code for quality, bugs, and improvements
-argument-hint: [optional: file path]
+description: 审查代码质量、bug 和改进点
+argument-hint: [可选: 文件路径]
 allowed-tools: Read, Grep, Glob, Bash(git diff:*)
 ---
 
-Review code and provide feedback.
+审查代码并提供反馈。
 
-Target: $ARGUMENTS (or current git diff if not specified)
+目标: $ARGUMENTS (未指定时为当前 git diff)
 
-## Review Focus Areas
+## 审查重点领域
 
-1. **Bugs & Errors**: Logic errors, null checks, edge cases
-2. **Security**: Input validation, injection risks, sensitive data
-3. **Performance**: Obvious inefficiencies, N+1 queries
-4. **Readability**: Naming, complexity, documentation needs
+1. **Bugs 和错误**: 逻辑错误、空值检查、边界情况
+2. **安全性**: 输入验证、注入风险、敏感数据
+3. **性能**: 明显的低效问题、N+1 查询
+4. **可读性**: 命名、复杂度、文档需求
 
-## Steps
+## 步骤
 
-1. If file path provided, read that file
-2. If no path, run `git diff` to see current changes
-3. Analyze the code against the focus areas
-4. Provide structured feedback
+1. 如果提供了文件路径，读取该文件
+2. 如果没有路径，运行 `git diff` 查看当前更改
+3. 根据重点领域分析代码
+4. 提供结构化反馈
 
-## Output Format
+## 输出格式
 
 ```markdown
-## Code Review
+## 代码审查
 
-### Summary
-[One sentence overall assessment]
+### 摘要
+[一句话整体评估]
 
-### Issues Found
+### 发现的问题
 
-#### Critical (Must Fix)
-- [issue]: [location] - [brief explanation]
+#### 严重（必须修复）
+- [问题]: [位置] - [简要说明]
 
-#### Warnings (Should Fix)
-- [issue]: [location] - [brief explanation]
+#### 警告（应该修复）
+- [问题]: [位置] - [简要说明]
 
-#### Suggestions (Nice to Have)
-- [suggestion]: [location] - [brief explanation]
+#### 建议（最好有）
+- [建议]: [位置] - [简要说明]
 
-### What's Good
-- [positive observation]
+### 做得好的地方
+- [正面观察]
 ```
 
-## Guidelines
+## 指南
 
-- Be specific about locations (file:line if possible)
-- Provide actionable feedback
-- Don't nitpick style unless it impacts readability
-- Acknowledge good patterns you see
+- 具体说明位置（尽可能提供 文件:行号）
+- 提供可操作的反馈
+- 不要挑剔风格，除非影响可读性
+- 认可你看到的良好模式

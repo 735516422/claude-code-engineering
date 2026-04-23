@@ -2,6 +2,8 @@
   "name": "quality-hooks-demo",
   "version": "1.0.0",
   "scripts": {
-    "test": "node src/math.test.js"
+    "test": "node src/math.test.js && node src/counter.test.js",
+    "test:math": "node src/math.test.js",
+    "test:counter": "node src/counter.test.js"
   }
 }

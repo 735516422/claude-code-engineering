@@ -20,10 +20,6 @@
           {
             "type": "command",
             "command": "./hooks/auto-format.sh"
-          },
-          {
-            "type": "command",
-            "command": "./hooks/lint-check.sh"
           }
         ]
       }
@@ -31,6 +27,10 @@
     "Stop": [
       {
         "hooks": [
+          {
+            "type": "command",
+            "command": "./hooks/lint-block.sh"
+          },
           {
             "type": "command",
             "command": "./hooks/run-tests.sh"

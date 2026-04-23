@@ -1,38 +1,38 @@
 ---
-description: Show git status with helpful context
+description: 显示带有帮助性上下文的 git 状态
 allowed-tools: Bash(git:*)
 model: haiku
 ---
 
-Show the current git status with helpful context.
+显示当前 git 状态及帮助性上下文。
 
-## Steps
+## 步骤
 
-1. Run `git status`
-2. Summarize the state in a friendly format
+1. 运行 `git status`
+2. 以友好的格式总结状态
 
-## Output Format
+## 输出格式
 
 ```
-## Git Status
+## Git 状态
 
-Branch: [branch name]
-State: [clean / has changes / has conflicts]
+分支: [分支名称]
+状态: [干净 / 有更改 / 有冲突]
 
-### Staged Changes (ready to commit)
-- [files]
+### 已暂存的更改（准备好提交）
+- [文件]
 
-### Unstaged Changes (not staged)
-- [files]
+### 未暂存的更改（未暂存）
+- [文件]
 
-### Untracked Files
-- [files]
+### 未跟踪的文件
+- [文件]
 
-### Suggested Next Steps
-- [what you might want to do next]
+### 建议的下一步
+- [您接下来可能想做的事情]
 ```
 
-If the repo is clean, just say:
+如果仓库是干净的，只需显示:
 ```
-✓ Working tree clean on branch [name]
+✓ 工作树在分支 [名称] 上是干净的
 ```

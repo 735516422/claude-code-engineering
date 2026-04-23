@@ -1,39 +1,39 @@
 ---
-description: Quick git commit with auto-generated or specified message
-argument-hint: [optional: commit message]
+description: 快速 git 提交，使用自动生成或指定的提交信息
+argument-hint: [可选: 提交信息]
 allowed-tools: Bash(git status:*), Bash(git add:*), Bash(git commit:*), Bash(git diff:*)
 model: haiku
 ---
 
-Create a git commit.
+创建 git 提交。
 
-If a message is provided: $ARGUMENTS
-- Use that as the commit message
+如果提供了提交信息: $ARGUMENTS
+- 使用该信息作为提交信息
 
-If no message is provided:
-- Analyze the changes with `git diff --staged` (or `git diff` if nothing staged)
-- Generate a concise, meaningful commit message
+如果未提供提交信息:
+- 使用 `git diff --staged` 分析更改（如果没有暂存内容则使用 `git diff`）
+- 生成简洁、有意义的提交信息
 
-## Steps
+## 步骤
 
-1. Check `git status` to see current state
-2. If nothing staged, run `git add .` to stage all changes
-3. Review what will be committed with `git diff --staged`
-4. Create commit:
-   - If `$ARGUMENTS` is provided, use it as the message
-   - Otherwise, generate a message based on the diff
-5. Show the commit result
+1. 检查 `git status` 查看当前状态
+2. 如果没有暂存内容，运行 `git add .` 暂存所有更改
+3. 使用 `git diff --staged` 查看将要提交的内容
+4. 创建提交:
+   - 如果提供了 `$ARGUMENTS`，使用它作为提交信息
+   - 否则，根据 diff 生成提交信息
+5. 显示提交结果
 
-## Commit Message Format
+## 提交信息格式
 
-- Start with type: `feat:`, `fix:`, `docs:`, `refactor:`, `test:`, `chore:`
-- Be concise but descriptive (max 72 chars for first line)
-- Example: `feat: add user authentication with JWT`
+- 以类型开头: `feat:`, `fix:`, `docs:`, `refactor:`, `test:`, `chore:`
+- 简洁但具有描述性（第一行最多 72 个字符）
+- 示例: `feat: 添加基于 JWT 的用户认证`
 
-## Output
+## 输出
 
-Show a brief confirmation:
+显示简短的确认信息:
 ```
-✓ Committed: [commit message]
-  [number] files changed
+✓ 已提交: [提交信息]
+  [数量] 个文件已更改
 ```

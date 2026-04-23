@@ -1,46 +1,46 @@
 ---
-description: Explain code in simple, beginner-friendly terms
-argument-hint: [code snippet or file path]
+description: 用简单、适合初学者的方式解释代码
+argument-hint: [代码片段或文件路径]
 ---
 
-Explain the following code or concept: $ARGUMENTS
+解释以下代码或概念: $ARGUMENTS
 
-## Explanation Style
+## 解释风格
 
-Use the "teach a friend" approach:
+使用"教朋友"的方式:
 
-1. **Start Simple**: One sentence summary of what it does
-2. **Break It Down**: Step through the logic
-3. **Use Analogies**: Compare to everyday concepts when helpful
-4. **Highlight Key Parts**: Point out the important bits
+1. **从简单开始**: 一句话总结它的作用
+2. **逐步拆解**: 逐步讲解逻辑
+3. **使用类比**: 在有帮助时与日常概念进行比较
+4. **突出重点**: 指出重要的部分
 
-## Output Format
+## 输出格式
 
 ```markdown
-## What It Does
-[One sentence summary]
+## 功能
+[一句话总结]
 
-## How It Works
+## 工作原理
 
-### Step by Step
-1. First, [what happens first]
-2. Then, [what happens next]
+### 逐步讲解
+1. 首先，[先发生什么]
+2. 然后，[接下来发生什么]
 ...
 
-### Key Concepts
-- **[concept]**: [explanation]
+### 核心概念
+- **[概念]**: [解释]
 
-## Example
-[Simple example if helpful]
+## 示例
+[如果有帮助，提供简单示例]
 
-## Remember
-[The one thing to take away]
+## 记住
+[最重要的一点]
 ```
 
-## Guidelines
+## 指南
 
-- Assume the reader is learning
-- Avoid jargon, or define it when used
-- Use code examples when they clarify
-- Keep it concise but complete
-- If explaining a file, focus on the most important parts
+- 假设读者正在学习
+- 避免使用行话，或在使用时加以解释
+- 使用代码示例来澄清
+- 保持简洁但完整
+- 如果解释文件，专注于最重要的部分
